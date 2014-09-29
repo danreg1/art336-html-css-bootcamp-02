@@ -1,0 +1,64 @@
+/* 
+Globals
+	Sass variable, mixins, plugins, etc. that are used throughout the entore site.
+*/
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Bitter-Bold'), url(http://fonts.gstatic.com/s/bitter/v7/evC1haE-MsorTl_A7_uSGbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Josefin Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Slab'), local('JosefinSlab'), url(http://fonts.gstatic.com/s/josefinslab/v6/46aYWdgz-1oFX11flmyEfaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Josefin Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Josefin Slab Bold'), local('JosefinSlab-Bold'), url(http://fonts.gstatic.com/s/josefinslab/v6/NbE6ykYuM2IyEwxQxOIi2BAPw1J91axKNXP_-QX9CC8.woff) format('woff');
+}
+
+
+
+@mixin body-font-regular {
+    font-family: 'Josefin Slab', serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin body-font-bold {
+    font-family: 'Josefin Slab', serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin headline-font {
+    font-family: 'Bitter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+$color: #242424;
+$color-title: #c45353;
+$background-color: #e6e3e3;
+
+
+background-color {
+
+}
